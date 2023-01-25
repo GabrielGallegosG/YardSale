@@ -1,3 +1,4 @@
+/* Estilos generales */
 :root{
     --white: #FFFFFF;
     --black: #000000;
@@ -17,6 +18,7 @@ body{
     display: none;
 }
 
+/* Estilos de nav */
 nav{
     display: flex;
     justify-content: space-between;
@@ -82,6 +84,7 @@ nav{
 
 }
 
+/* Estilos de desktop */
 .desktop-menu{
     position: absolute;
     top: 60px;
