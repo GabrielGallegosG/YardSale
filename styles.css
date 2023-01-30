@@ -376,6 +376,13 @@ nav {
   .product-detail-carrito {
     width: 100%;
   }
+  .product-detail {
+    background: var(--white);
+    height: 100%;
+  }
+  .flechita {
+    display: block;
+  }
 }
 
 @media (min-width: 641px) {

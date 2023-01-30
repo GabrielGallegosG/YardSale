@@ -9,10 +9,12 @@ const productDetailContainer = document.querySelector(".product-detail");
 const productDetailCloseButton = document.querySelector(
   ".product-detail-close"
 );
+const flechitaIcon = document.querySelector(".flechita");
 
 navEmail.addEventListener("click", toggleDesktopMenu);
 mobileHamIcon.addEventListener("click", toggleMobileMenu);
 menuCarritoIcon.addEventListener("click", toggleCarritoAside);
+flechitaIcon.addEventListener("click", carritoAsideClose);
 
 function toggleDesktopMenu() {
   aside.classList.add("inactive");
@@ -30,6 +32,10 @@ function toggleCarritoAside() {
   desktopMenu.classList.add("inactive");
   productDetailContainer.classList.add("inactive");
   aside.classList.toggle("inactive");
+}
+
+function carritoAsideClose() {
+  aside.classList.add("inactive");
 }
 
 function openProductDetailAside() {
