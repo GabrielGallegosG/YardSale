@@ -373,6 +373,9 @@ nav {
     width: 140px;
     height: 140px;
   }
+  .product-detail-carrito {
+    width: 100%;
+  }
 }
 
 @media (min-width: 641px) {

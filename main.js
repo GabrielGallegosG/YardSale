@@ -5,6 +5,10 @@ const aside = document.querySelector(".product-detail-carrito");
 const desktopMenu = document.querySelector(".desktop-menu");
 const mobileMenu = document.querySelector(".mobile-menu");
 const cardsContainer = document.querySelector(".cards-container");
+const productDetailContainer = document.querySelector(".product-detail");
+const productDetailCloseButton = document.querySelector(
+  ".product-detail-close"
+);
 
 navEmail.addEventListener("click", toggleDesktopMenu);
 mobileHamIcon.addEventListener("click", toggleMobileMenu);
@@ -18,12 +22,23 @@ function toggleDesktopMenu() {
 function toggleMobileMenu() {
   aside.classList.add("inactive");
   mobileMenu.classList.toggle("inactive");
+  productDetailClose();
 }
 
 function toggleCarritoAside() {
   mobileMenu.classList.add("inactive");
   desktopMenu.classList.add("inactive");
+  productDetailContainer.classList.add("inactive");
   aside.classList.toggle("inactive");
+}
+
+function openProductDetailAside() {
+  aside.classList.add("inactive");
+  productDetailContainer.classList.remove("inactive");
+}
+
+function productDetailClose() {
+  productDetailContainer.classList.add("inactive");
 }
 
 const productList = [];
@@ -69,6 +84,8 @@ function renderProducts(arr) {
 
     const productImg = document.createElement("img");
     productImg.setAttribute("src", product.image);
+    productImg.addEventListener("click", openProductDetailAside);
+    productDetailCloseButton.addEventListener("click", productDetailClose);
 
     const productInfo = document.createElement("div");
     productInfo.classList.add("product-info");
